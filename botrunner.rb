@@ -3,7 +3,7 @@ require 'discordrb'
 bot = Discordrb::PartyGatheringBot.new token: '', application_id: '', prefix: '!'
 
 bot.command :register do |name, *users|
-  create_party(name, users)
+  add_to_party(name, users)
 end
 
 bot.command :assemble do |name|

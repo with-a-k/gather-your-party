@@ -5,8 +5,8 @@ class Discordrb::PartyGatheringBot < Discordrb::Commands::CommandBot
     @parties = {}
   end
 
-  def create_party(name, users)
-    @parties[name] = []
+  def add_to_party(name, users)
+    @parties[name] = [] unless @parties[name]
     users.each do |user|
       @parties[name] << user
     end
