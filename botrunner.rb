@@ -1,6 +1,6 @@
 require 'discordrb'
 
-bot = Discordrb::PartyGatheringBot.new '', ''
+bot = Discordrb::PartyGatheringBot.new token: '', application_id: '', prefix: '!'
 
 bot.command :register do |name, *users|
   create_party(name, users)
